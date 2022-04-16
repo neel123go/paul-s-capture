@@ -5,9 +5,9 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" className='menu'>
+        <Navbar collapseOnSelect expand="lg" className='menu py-2'>
             <Container>
-                <Navbar.Brand as={Link} to="/home" className='fs-4'><span className='text-danger'>Neel's</span> Photography</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/home" className='fs-4'><span className='text-danger'>Paul's</span> Capture</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
