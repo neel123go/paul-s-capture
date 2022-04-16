@@ -1,0 +1,11 @@
+.menu {
+    background-color: rgb(249, 241, 241);
+}
+
+.link-item {
+    color: rgb(53, 30, 30);
+}
+
+.link-item:hover {
+    color: rgb(181, 46, 46);
+}
