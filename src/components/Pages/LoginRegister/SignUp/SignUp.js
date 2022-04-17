@@ -3,6 +3,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../../Firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
+import Loading from '../../../Shared/Loading/Loading';
 
 const SignUp = () => {
     const [createUserWithEmailAndPassword, user, loading, hookError,] = useCreateUserWithEmailAndPassword(auth);
@@ -44,6 +45,10 @@ const SignUp = () => {
         errorElement = <div className='text-center text-danger'>
             <p>{hookError?.message}</p>
         </div>
+    }
+
+    if (loading) {
+        return <Loading></Loading>
     }
 
     return (

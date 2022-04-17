@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../../Firebase.init';
+import Loading from '../../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -41,6 +42,10 @@ const Login = () => {
         errorElement = <div className='text-center text-danger'>
             <p>{hookError?.message}</p>
         </div>
+    }
+
+    if (loading) {
+        return <Loading></Loading>
     }
 
     return (
