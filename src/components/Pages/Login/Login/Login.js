@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -15,6 +16,7 @@ const Login = () => {
                     <input type="password" className="form-control" />
                 </div>
                 <button type="submit" className="btn btn-primary">Login</button>
+                <p className='text-secondary mt-2'>Don't have any account? <Link className='text-danger text-decoration-none' to='/signup'>Sign Up</Link></p>
                 <SocialLogin></SocialLogin>
             </form>
         </div>
