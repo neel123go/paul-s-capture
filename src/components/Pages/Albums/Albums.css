@@ -1,0 +1,12 @@
+.album-title {
+    font-size: 50px;
+}
+
+.album-img {
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+.album-img:hover {
+    filter: grayscale(0);
+}
