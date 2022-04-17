@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../../../Shared/Loading/Loading';
 
 const SignUp = () => {
-    const [createUserWithEmailAndPassword, user, loading, hookError,] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, user, loading, hookError,] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [error, setError] = useState('');
     const navigate = useNavigate();
     let errorElement;
