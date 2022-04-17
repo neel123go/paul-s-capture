@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import auth from '../../../Firebase.init';
+import auth from '../../../../Firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [createUserWithEmailAndPassword, user, loading, hookError,] = useCreateUserWithEmailAndPassword(auth);
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    let errorElement;
 
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -39,18 +40,25 @@ const SignUp = () => {
         }
     }, [user]);
 
+    if (hookError) {
+        errorElement = <div className='text-center text-danger'>
+            <p>{hookError?.message}</p>
+        </div>
+    }
+
     return (
         <div className='container w-50 mx-auto border border-danger rounded-3 p-5 my-5'>
             <form onSubmit={handleSignUp}>
                 <h2 className='mb-2'>Create an account</h2>
                 <p className='text-danger mb-4'>{error}</p>
+                <p className='text-danger mb-4'>{errorElement}</p>
                 <div className="mb-3">
                     <label className="form-label">Name</label>
-                    <input type="text" name='name' className="form-control" />
+                    <input autoComplete='off' type="text" name='name' className="form-control" />
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Email address</label>
-                    <input type="text" name='email' className="form-control" />
+                    <input autoComplete='off' type="text" name='email' className="form-control" />
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Password</label>
@@ -61,7 +69,7 @@ const SignUp = () => {
                     <input type="password" name='confirmPassword' className="form-control" />
                 </div>
                 <button type="submit" className="btn btn-primary">Sign Up</button>
-                <p className='text-secondary mt-2'>Already have an account? <Link className='text-danger text-decoration-none' to='/login'>Sign Up</Link></p>
+                <p className='text-secondary mt-2'>Already have an account? <Link className='text-danger text-decoration-none' to='/login'>Login</Link></p>
             </form>
             <SocialLogin></SocialLogin>
         </div>
