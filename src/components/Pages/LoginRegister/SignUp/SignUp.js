@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../../Firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../../../Shared/Loading/Loading';
 
 const SignUp = () => {
     const [createUserWithEmailAndPassword, user, loading, hookError,] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateProfileError] = useUpdateProfile(auth);
     const [error, setError] = useState('');
     const navigate = useNavigate();
     let errorElement;
 
-    const handleSignUp = (event) => {
+    const handleSignUp = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
@@ -31,7 +32,8 @@ const SignUp = () => {
             setError("Password does't matched");
         } else {
             setError('');
-            createUserWithEmailAndPassword(email, password);
+            await createUserWithEmailAndPassword(email, password);
+            await updateProfile({ displayName: name });
         }
     }
 
@@ -41,13 +43,13 @@ const SignUp = () => {
         }
     }, [user]);
 
-    if (hookError) {
+    if (hookError || updateProfileError) {
         errorElement = <div className='text-center text-danger'>
-            <p>{hookError?.message}</p>
+            <p>{hookError?.message} {updateProfileError?.message}</p>
         </div>
     }
 
-    if (loading) {
+    if (loading || updating) {
         return <Loading></Loading>
     }
 
