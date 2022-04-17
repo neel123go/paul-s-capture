@@ -13,7 +13,7 @@ const Banner = () => {
     };
 
     return (
-        <div className='pb-5'>
+        <div className='pb-md-5 pb-4'>
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                     <img

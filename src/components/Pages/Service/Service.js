@@ -5,7 +5,7 @@ import './Service.css';
 const Service = ({ service }) => {
     const { name, img, description, price } = service;
     return (
-        <div className='d-md-flex justify-content-between align-items-center container mt-5 p-5 event-service'>
+        <div className='d-md-flex justify-content-between align-items-center container mt-md-5 mt-4 p-md-5 p-4 event-service'>
             <div className='w-100'>
                 <img src={img} className="img-fluid w-100 mx-auto" alt="" />
             </div>

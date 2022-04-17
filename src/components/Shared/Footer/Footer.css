@@ -1,0 +1,38 @@
+.footer {
+    background-color: rgb(231, 208, 208);
+    margin-top: 80px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(218, 96, 80);
+    background-color: rgba(226, 184, 180, 0.514);
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.social-icon a {
+    color: rgb(77, 77, 77);
+    font-size: 18px;
+}
+
+.social-icon:hover a {
+    color: brown;
+}
+
+@media only screen and (min-width: 576px) {
+    .footer {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer {
+        margin-top: 30px;
+    }
+}

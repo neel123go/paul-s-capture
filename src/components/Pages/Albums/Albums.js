@@ -12,8 +12,8 @@ import './Albums.css';
 const Albums = () => {
     return (
         <div>
-            <h2 className='text-center fs-1 my-5 pt-5'>My <span className='text-danger album-title'>Albums</span></h2>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 container my-5 mx-auto p-3 p-md-0">
+            <h2 className='text-center fs-1 my-md-5 mt-md-0 mt-4 mb-2  pt-md-5 pt-0'>My <span className='text-danger album-title'>Albums</span></h2>
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 container my-md-5 my-2 mx-auto p-3 p-md-0">
                 <div className="col p-0">
                     <a href="https://ibb.co/album/pnWMJZ" target={`_blank`}>
                         <div className="card">
