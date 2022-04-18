@@ -11,62 +11,62 @@ import './Albums.css';
 
 
 // Extra section Component
-const Albums = () => {
+const Albumss = () => {
     return (
         <div className='pb-xl-4 pb-3'>
-            <h2 className='text-center fs-1 my-md-3 mt-4 mb-2  pt-md-5 pt-0'>My <span className='text-danger album-title'>Albums</span></h2>
+            <h2 className='text-center fs-1 my-md-3 mt-4 mb-2  pt-md-5 pt-0'>My <span className='text-danger Albums-title'>Albumss</span></h2>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 container my-md-5 my-2 mx-auto p-3 p-md-0">
                 <div className="col p-0">
-                    <a href="https://ibb.co/album/pnWMJZ" target={`_blank`}>
+                    <a href="https://ibb.co/Albums/pnWMJZ" target={`_blank`}>
                         <div className="card">
                             <img src={Image1} className="album-img" alt="..." />
                         </div>
                     </a>
                 </div>
                 <div className="col p-0">
-                    <a href="https://ibb.co/album/tMt18J" target={`_blank`}>
+                    <a href="https://ibb.co/Albums/tMt18J" target={`_blank`}>
                         <div className="card">
                             <img src={Image2} className="album-img" alt="..." />
                         </div>
                     </a>
                 </div>
                 <div className="col p-0">
-                    <a href="https://ibb.co/album/QPwPpC" target={`_blank`}>
+                    <a href="https://ibb.co/Albums/QPwPpC" target={`_blank`}>
                         <div className="card">
                             <img src={Image3} className="album-img" alt="..." />
                         </div>
                     </a>
                 </div>
                 <div className="col p-0">
-                    <a href="https://ibb.co/album/VxPbpS" target={`_blank`}>
+                    <a href="https://ibb.co/Albums/VxPbpS" target={`_blank`}>
                         <div className="card">
                             <img src={Image4} className="album-img" alt="..." />
                         </div>
                     </a>
                 </div>
                 <div className="col p-0">
-                    <a href="https://ibb.co/album/yBGL46" target={`_blank`}>
+                    <a href="https://ibb.co/Albums/yBGL46" target={`_blank`}>
                         <div className="card">
                             <img src={Image5} className="album-img" alt="..." />
                         </div>
                     </a>
                 </div>
                 <div className="col p-0">
-                    <a href="https://ibb.co/album/cxbd7Q" target={`_blank`}>
+                    <a href="https://ibb.co/Albums/cxbd7Q" target={`_blank`}>
                         <div className="card">
                             <img src={Image6} className="album-img" alt="..." />
                         </div>
                     </a>
                 </div>
                 <div className="col p-0">
-                    <a href="https://ibb.co/album/m67WPM" target={`_blank`}>
+                    <a href="https://ibb.co/Albums/m67WPM" target={`_blank`}>
                         <div className="card">
                             <img src={Image7} className="album-img" alt="..." />
                         </div>
                     </a>
                 </div>
                 <div className="col p-0">
-                    <a href="https://ibb.co/album/LxpS62" target={`_blank`}>
+                    <a href="https://ibb.co/Albums/LxpS62" target={`_blank`}>
                         <div className="card">
                             <img src={Image8} className="album-img" alt="..." />
                         </div>
@@ -77,4 +77,4 @@ const Albums = () => {
     );
 };
 
-export default Albums;
+export default Albumss;
