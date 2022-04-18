@@ -16,6 +16,8 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
+                        <Link className='link-item text-decoration-none me-5 fs-5' to="/home">Home</Link>
+                        <Link className='link-item text-decoration-none me-5 fs-5' to="/about">About</Link>
                         <Link className='link-item text-decoration-none me-5 fs-5' to="/blogs">Blogs</Link>
                         {
                             user ? <button onClick={() => signOut(auth)} className='btn btn-danger'>Sign Out</button>

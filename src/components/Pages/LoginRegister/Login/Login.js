@@ -7,7 +7,6 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
-import { async } from '@firebase/util';
 
 const Login = () => {
     const [signInWithEmailAndPassword, user, loading, hookError,] = useSignInWithEmailAndPassword(auth);
@@ -64,7 +63,6 @@ const Login = () => {
             toast('Please enter your email');
         }
     }
-
 
     return (
         <div className='container w-50 mx-auto border border-danger rounded-3 p-5 my-5'>

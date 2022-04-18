@@ -6,7 +6,7 @@ import { faFacebookF, faInstagram, faTwitter, faPinterest } from '@fortawesome/f
 const Footer = () => {
     const date = new Date();
     return (
-        <div className='footer py-md-5 py-4  text-center'>
+        <div className='footer py-md-5 py-4 text-center'>
             <div className='container'>
                 <div className='d-flex justify-content-center align-items-center'>
                     <div className='social-icon'>
