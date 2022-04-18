@@ -12,7 +12,7 @@ const About = () => {
                 </div>
                 <div className='w-75 ms-5 mt-4'>
                     <h2>Ayoun Paul Neel</h2>
-                    <p className='mt-3'>I want to be a web developer. I believe that dreams don't work unless you do. So, to fulfill my dreams I always watch every single module attentively and do every assignment carefully and honestly which is given by Programming Hero</p>
+                    <p className='mt-3'>I want to be a web developer. I believe that dreams don't work unless you do. So, to fulfill my dreams I always watch every single module attentively and do every assignment carefully and honestly which is given by Programming Hero. To do all of my work I spend 6-7 hours daily.</p>
                 </div>
             </div>
         </div>
