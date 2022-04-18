@@ -40,8 +40,8 @@ const SocialLogin = () => {
             {errorElement}
             {loadingSpinner}
             <div className='text-center mt-3'>
-                <button onClick={() => signInWithGoogle()} className='btn btn-light border border-secondary me-3'><img className='image-icon' src={GoogleImg} alt="" /> Continue With Google</button>
-                <button onClick={() => signInWithGithub()} className='btn btn-light border border-secondary me-3'><img className='image-icon' src={GithubImg} alt="" /> Continue With Github</button>
+                <button onClick={() => signInWithGoogle()} className='btn btn-light border border-secondary me-3 mb-3'><img className='image-icon' src={GoogleImg} alt="" /> Continue With Google</button>
+                <button onClick={() => signInWithGithub()} className='btn btn-light border border-secondary me-3 mb-3'><img className='image-icon' src={GithubImg} alt="" /> Continue With Github</button>
             </div>
         </div>
     );

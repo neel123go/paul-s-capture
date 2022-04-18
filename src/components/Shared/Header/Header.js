@@ -12,18 +12,18 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" className='menu py-2'>
             <Container>
-                <Navbar.Brand as={Link} to="/home" className='fs-4'><span className='text-danger'>Paul's</span> Capture</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/" className='fs-4'><span className='text-danger'>Paul's</span> Capture</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        <Link className='link-item text-decoration-none me-5 fs-5' to="/home">Home</Link>
-                        <Link className='link-item text-decoration-none me-5 fs-5' to="/about">About</Link>
-                        <Link className='link-item text-decoration-none me-5 fs-5' to="/blogs">Blogs</Link>
+                        <Nav.Link as={Link} className='link-item text-decoration-none me-4 fs-5' to="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} className='link-item text-decoration-none me-4 fs-5' to="/blogs">Blogs</Nav.Link>
+                        <Nav.Link as={Link} className='link-item text-decoration-none me-4 fs-5' to='/about'>About</Nav.Link>
                         {
-                            user ? <button onClick={() => signOut(auth)} className='btn btn-danger'>Sign Out</button>
+                            user ? <button onClick={() => signOut(auth)} className='btn btn-danger' style={{ width: '100px' }}>Sign Out</button>
                                 :
                                 <div>
-                                    <Link className='link-item text-decoration-none fs-5' to="/login">Login</Link>
+                                    <Nav.Link as={Link} className='link-item text-decoration-none fs-5' to="/login">Login</Nav.Link>
                                 </div>
                         }
                     </Nav>

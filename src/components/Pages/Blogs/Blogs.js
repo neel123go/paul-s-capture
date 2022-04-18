@@ -2,8 +2,8 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='container'>
-            <h2 className='text-center text-danger my-5'>Questions Answer</h2>
+        <div className='container p-4'>
+            <h2 className='text-center text-danger my-md-5 my-1'>Questions Answer</h2>
             <div className='my-5'>
                 <h3>Difference between authorization and authentication?</h3>
                 <p className='text-secondary'>Authentication is about validating user credentials like Username, Email & Password to verify user identity. If a user enters the correct data, the system assumes the identity is valid and grants access. On the other side, Authorization is the process to determine whether the authenticated user has access to the resources. It checks users' rights to grant users access to resources such as databases, information, files, etc. Authentication is done before the authorization process, whereas the authorization process is done after the authentication process.</p>
