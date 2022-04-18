@@ -8,7 +8,7 @@ import SignUp from './components/Pages/LoginRegister/SignUp/SignUp';
 import Blogs from './components/Pages/Blogs/Blogs';
 import CheckOut from './components/Pages/CheckOut/CheckOut';
 import NotFound from './components/Shared/NotFound/NotFound';
-import RequireAuth from "./components/Pages/LoginRegister/RequiredAuth/RequiredAuth";
+import RequireAuth from "./components/Pages/LoginRegister/RequireAuth/RequireAuth";
 import About from './components/Pages/About/About';
 
 function App() {

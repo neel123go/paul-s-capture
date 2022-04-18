@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../../../Firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
 
-const RequiredAuth = ({ children }) => {
+const RequireAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
     const location = useLocation();
 
@@ -19,4 +19,4 @@ const RequiredAuth = ({ children }) => {
     return children;
 };
 
-export default RequiredAuth;
+export default RequireAuth;

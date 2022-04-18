@@ -4,16 +4,21 @@ import { useParams } from 'react-router-dom';
 import auth from '../../../Firebase.init';
 
 const CheckOut = () => {
+    // Dynamic service id
     const { checkoutId } = useParams();
+
+    // Current user
     const [user] = useAuthState(auth);
     const [submit, setSubmit] = useState(false);
     const [error, setError] = useState('');
 
+    // Function for submit purchase form
     const handleSubmit = (e) => {
         e.preventDefault();
         const address = e.target.homeAddress.value;
         const phoneNumber = e.target.phoneNumber.value;
 
+        // form validation
         if (address === '' || phoneNumber === '') {
             setError('Field must not be empty');
         } else {

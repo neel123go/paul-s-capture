@@ -8,6 +8,7 @@ import './Banner.css';
 const Banner = () => {
     const [index, setIndex] = useState(0);
 
+    // Function for slider
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     };

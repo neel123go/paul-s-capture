@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faPinterest } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
+    // get current date
     const date = new Date();
+
     return (
         <div className='footer py-md-5 py-4 text-center'>
             <div className='container'>

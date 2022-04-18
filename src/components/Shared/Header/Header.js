@@ -7,6 +7,7 @@ import auth from '../../../Firebase.init';
 import './Header.css';
 
 const Header = () => {
+    // get current user
     const [user] = useAuthState(auth);
 
     return (

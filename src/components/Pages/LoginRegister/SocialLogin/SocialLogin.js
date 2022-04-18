@@ -1,31 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './SocialLogin.css';
 import GoogleImg from '../../../../images/social/google.png';
 import GithubImg from '../../../../images/social/github.png';
 import auth from '../../../../Firebase.init';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 
 const SocialLogin = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
+    const location = useLocation();
     const navigate = useNavigate();
+    let from = location.state?.from?.pathname || "/";
     let errorElement;
     let loadingSpinner;
 
     useEffect(() => {
         if (googleUser || githubUser) {
-            navigate('/home');
+            navigate(from, { replace: true });
         }
     }, [googleUser, githubUser]);
 
+    // Error handle
     if (googleError || githubError) {
         errorElement = <div className='text-center text-danger'>
             <p>{googleError?.message} {githubError?.message}</p>
         </div>
     }
 
+    // Loading handle
     if (googleLoading || githubLoading) {
         loadingSpinner = <div className='text-center'><Spinner animation="border" variant="primary" /></div>
     }

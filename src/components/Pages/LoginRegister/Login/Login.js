@@ -19,6 +19,14 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     let errorElement;
 
+    // Navigate user
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [user]);
+
+    // function for login
     const handleLogin = (event) => {
         event.preventDefault();
         const email = emailRef.current.value;
@@ -38,22 +46,20 @@ const Login = () => {
         }
     }
 
-    useEffect(() => {
-        if (user) {
-            navigate(from, { replace: true });
-        }
-    }, [user]);
 
+    // Error handle
     if (hookError || resetError) {
         errorElement = <div className='text-center text-danger'>
             <p>{hookError?.message} {resetError?.message}</p>
         </div>
     }
 
+    // Loading handle
     if (loading || sending) {
         return <Loading></Loading>
     }
 
+    // function for reset password
     const handleResetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {

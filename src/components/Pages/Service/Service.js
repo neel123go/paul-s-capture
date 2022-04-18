@@ -4,6 +4,7 @@ import './Service.css';
 import { useNavigate } from 'react-router-dom';
 
 const Service = ({ service }) => {
+    // destructuring service
     const { id, name, img, description, price } = service;
     const navigate = useNavigate();
 

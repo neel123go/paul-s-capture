@@ -9,6 +9,8 @@ import Image7 from '../../../images/Albums/album-7.jpg';
 import Image8 from '../../../images/Albums/album-8.jpg';
 import './Albums.css';
 
+
+// Extra section Component
 const Albums = () => {
     return (
         <div className='pb-xl-4 pb-3'>

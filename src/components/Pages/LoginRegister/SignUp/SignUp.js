@@ -12,6 +12,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     let errorElement;
 
+    // Function for signup
     const handleSignUp = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
@@ -37,18 +38,21 @@ const SignUp = () => {
         }
     }
 
+    // Navigate user
     useEffect(() => {
         if (user) {
             navigate('/home');
         }
     }, [user]);
 
+    // Error handle
     if (hookError || updateProfileError) {
         errorElement = <div className='text-center text-danger'>
             <p>{hookError?.message} {updateProfileError?.message}</p>
         </div>
     }
 
+    // Loading handle
     if (loading || updating) {
         return <Loading></Loading>
     }

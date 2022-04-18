@@ -7,14 +7,16 @@
     filter: grayscale(0);
 }
 
-@media only screen and (min-width: 576px) {
-    .album-title {
-        font-size: 50px;
-    }
-}
-
+/* Responsive for mobile device */
 @media only screen and (max-width: 576px) {
     .album-title {
         font-size: 35px;
+    }
+}
+
+/* Responsive for other device */
+@media only screen and (min-width: 576px) {
+    .album-title {
+        font-size: 50px;
     }
 }
